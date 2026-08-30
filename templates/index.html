@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Home | PlantCare AI
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <span class="badge">
+                AI POWERED AGRICULTURE
+            </span>
+
+            <h1>
+                Intelligent Plant
+                <span>Disease Detection</span>
+            </h1>
+
+            <p>
+                Detect whether a plant leaf is healthy
+                or diseased using Deep Learning and
+                Computer Vision.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="{{ url_for('detection') }}"
+                   class="btn primary-btn">
+
+                    🔍 Detect Disease
+
+                </a>
+
+                <a href="{{ url_for('how_it_works') }}"
+                   class="btn secondary-btn">
+
+                    Learn How It Works
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="leaf-icon">
+                🌿
+            </div>
+
+            <h3>
+                AI Plant Analysis
+            </h3>
+
+            <p>
+                Upload a plant leaf image and
+                let our trained CNN model analyze it.
+            </p>
+
+            <div class="mini-stats">
+
+                <div>
+                    <strong>224×224</strong>
+                    <small>Image Size</small>
+                </div>
+
+                <div>
+                    <strong>CNN</strong>
+                    <small>AI Model</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <span class="small-title">
+            FEATURES
+        </span>
+
+        <h2>
+            Smart Plant Health Analysis
+        </h2>
+
+        <p>
+            Our system combines image processing
+            and deep learning to analyze plant leaves.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🤖
+            </div>
+
+            <h3>
+                AI-Based Detection
+            </h3>
+
+            <p>
+                Uses a trained Convolutional Neural
+                Network to classify plant leaf images.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                ⚡
+            </div>
+
+            <h3>
+                Fast Prediction
+            </h3>
+
+            <p>
+                Upload an image and receive the
+                prediction within seconds.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📊
+            </div>
+
+            <h3>
+                Confidence Score
+            </h3>
+
+            <p>
+                The system displays the model's
+                prediction confidence percentage.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🌱
+            </div>
+
+            <h3>
+                Simple to Use
+            </h3>
+
+            <p>
+                No technical knowledge is required.
+                Simply upload a plant image.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<section class="cta-section">
+
+    <h2>
+        Ready to check your plant?
+    </h2>
+
+    <p>
+        Upload a leaf image and let the AI model
+        analyze its health.
+    </p>
+
+    <a href="{{ url_for('detection') }}"
+       class="btn primary-btn">
+
+        Start Detection
+
+    </a>
+
+</section>
+
+
+{% endblock %}

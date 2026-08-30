@@ -1,0 +1,264 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Disease Detection | PlantCare AI
+{% endblock %}
+
+
+{% block content %}
+
+
+<section class="page-header">
+
+    <span class="small-title">
+        AI DIAGNOSIS
+    </span>
+
+    <h1>
+        Plant Disease Detection
+    </h1>
+
+    <p>
+        Upload a clear image of a plant leaf
+        for AI-based analysis.
+    </p>
+
+</section>
+
+
+<section class="detection-section">
+
+
+    <div class="upload-card">
+
+        <div class="upload-icon">
+            📷
+        </div>
+
+        <h2>
+            Upload Plant Image
+        </h2>
+
+        <p>
+            Supported formats:
+            JPG, JPEG, PNG, WEBP
+        </p>
+
+
+        <form method="POST"
+              enctype="multipart/form-data">
+
+
+            <label for="plant_image"
+                   class="file-label">
+
+                Choose Image
+
+            </label>
+
+
+            <input
+                type="file"
+                id="plant_image"
+                name="plant_image"
+                accept="image/*"
+                required
+            >
+
+
+            <p id="file-name">
+                No file selected
+            </p>
+
+
+            <button
+                type="submit"
+                class="btn primary-btn">
+
+                🔍 Analyze Plant
+
+            </button>
+
+
+        </form>
+
+
+        {% if error %}
+
+        <div class="error-message">
+
+            ⚠ {{ error }}
+
+        </div>
+
+        {% endif %}
+
+
+    </div>
+
+    {% if prediction %}
+
+    <div class="result-card">
+
+
+        <h2>
+            Detection Result
+        </h2>
+
+
+        {% if image_path %}
+
+        <img
+            src="{{ image_path }}"
+            class="result-image"
+            alt="Uploaded Plant">
+
+        {% endif %}
+
+
+        <div class="prediction-box
+            {% if prediction == 'healthy' %}
+                healthy-result
+            {% else %}
+                disease-result
+            {% endif %}">
+
+
+            {% if prediction == 'healthy' %}
+
+                <div class="result-icon">
+                    🌿
+                </div>
+
+                <h3>
+                    Healthy Plant
+                </h3>
+
+                <p>
+                    The uploaded leaf appears to be
+                    healthy according to the model.
+                </p>
+
+            {% else %}
+
+                <div class="result-icon">
+                    ⚠️
+                </div>
+
+                <h3>
+                    Disease Detected
+                </h3>
+
+                <p>
+                    The uploaded leaf appears to show
+                    signs of disease according to the model.
+                </p>
+
+            {% endif %}
+
+
+            <div class="confidence-box">
+
+                <span>
+                    Confidence
+                </span>
+
+                <strong>
+                    {{ "%.2f"|format(confidence) }}%
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+        <a href="{{ url_for('detection') }}"
+           class="btn secondary-btn">
+
+            Analyze Another Image
+
+        </a>
+
+
+    </div>
+
+    {% endif %}
+
+
+</section>
+
+<section class="info-section">
+
+    <h2>
+        How to get better results
+    </h2>
+
+    <div class="tips-grid">
+
+        <div>
+            📸
+            <strong>
+                Use a clear image
+            </strong>
+        </div>
+
+        <div>
+            💡
+            <strong>
+                Use good lighting
+            </strong>
+        </div>
+
+        <div>
+            🍃
+            <strong>
+                Keep the leaf visible
+            </strong>
+        </div>
+
+        <div>
+            🚫
+            <strong>
+                Avoid blurry images
+            </strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+    const fileInput =
+        document.getElementById("plant_image");
+
+    const fileName =
+        document.getElementById("file-name");
+
+
+    fileInput.addEventListener(
+        "change",
+        function() {
+
+            if (this.files.length > 0) {
+
+                fileName.textContent =
+                    this.files[0].name;
+
+            } else {
+
+                fileName.textContent =
+                    "No file selected";
+
+            }
+
+        }
+    );
+
+</script>
+
+
+{% endblock %}

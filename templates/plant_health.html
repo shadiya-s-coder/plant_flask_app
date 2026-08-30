@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Plant Health | PlantCare AI
+{% endblock %}
+
+
+{% block content %}
+
+
+<section class="page-header">
+
+    <span class="small-title">
+        PLANT HEALTH
+    </span>
+
+    <h1>
+        Understanding Plant Health
+    </h1>
+
+    <p>
+        Learn about common visual signs of
+        healthy and diseased plant leaves.
+    </p>
+
+</section>
+
+
+<section class="health-grid">
+
+    <div class="health-card healthy-card">
+
+        <div class="health-icon">
+            🌿
+        </div>
+
+        <h2>
+            Healthy Leaf
+        </h2>
+
+        <p>
+            A healthy plant leaf commonly has
+            a consistent appearance and strong
+            natural coloration.
+        </p>
+
+
+        <h3>
+            Common characteristics
+        </h3>
+
+        <ul>
+
+            <li>
+                ✓ Normal green appearance
+            </li>
+
+            <li>
+                ✓ No unusual spots
+            </li>
+
+            <li>
+                ✓ No visible lesions
+            </li>
+
+            <li>
+                ✓ Normal leaf structure
+            </li>
+
+            <li>
+                ✓ No major discoloration
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="health-card disease-card">
+
+        <div class="health-icon">
+            🦠
+        </div>
+
+        <h2>
+            Diseased Leaf
+        </h2>
+
+        <p>
+            Diseased leaves may show visible
+            changes such as unusual spots,
+            discoloration or damaged areas.
+        </p>
+
+
+        <h3>
+            Possible visual signs
+        </h3>
+
+        <ul>
+
+            <li>
+                ⚠ Unusual spots
+            </li>
+
+            <li>
+                ⚠ Yellowing or discoloration
+            </li>
+
+            <li>
+                ⚠ Lesions
+            </li>
+
+            <li>
+                ⚠ Damaged areas
+            </li>
+
+            <li>
+                ⚠ Abnormal patterns
+            </li>
+
+        </ul>
+
+    </div>
+
+
+</section>
+
+
+<section class="notice-section">
+
+    <h2>
+        Important Information
+    </h2>
+
+    <p>
+        The current AI model is trained for two
+        classes: <strong>Healthy</strong> and
+        <strong>Disease</strong>. It does not identify
+        a specific disease name.
+    </p>
+
+    <p>
+        The prediction should be considered an
+        AI-based indication rather than a replacement
+        for professional agricultural diagnosis.
+    </p>
+
+</section>
+
+
+{% endblock %}

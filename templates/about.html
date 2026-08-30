@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+About Project | PlantCare AI
+{% endblock %}
+
+
+{% block content %}
+
+
+<section class="page-header">
+
+    <span class="small-title">
+        ABOUT THE PROJECT
+    </span>
+
+    <h1>
+        PlantCare AI
+    </h1>
+
+    <p>
+        A Deep Learning based plant disease
+        detection system.
+    </p>
+
+</section>
+
+
+<section class="about-section">
+
+
+    <div class="about-card">
+
+        <div class="about-icon">
+            🌱
+        </div>
+
+        <h2>
+            Project Overview
+        </h2>
+
+        <p>
+            PlantCare AI is a web-based plant disease
+            detection system developed using Deep Learning,
+            Computer Vision and Flask.
+        </p>
+
+        <p>
+            The system accepts an image of a plant leaf,
+            preprocesses the image and uses a trained
+            Convolutional Neural Network to classify
+            the image as healthy or diseased.
+        </p>
+
+    </div>
+
+
+    <div class="about-card">
+
+        <h2>
+            Technologies Used
+        </h2>
+
+        <div class="technology-grid">
+
+            <div class="technology">
+                🐍
+                <strong>Python</strong>
+            </div>
+
+            <div class="technology">
+                🌐
+                <strong>Flask</strong>
+            </div>
+
+            <div class="technology">
+                🧠
+                <strong>TensorFlow</strong>
+            </div>
+
+            <div class="technology">
+                🤖
+                <strong>Keras</strong>
+            </div>
+
+            <div class="technology">
+                📷
+                <strong>Computer Vision</strong>
+            </div>
+
+            <div class="technology">
+                💻
+                <strong>HTML & CSS</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<section class="model-section">
+
+    <div class="section-heading">
+
+        <span class="small-title">
+            MACHINE LEARNING
+        </span>
+
+        <h2>
+            Models Used During Development
+        </h2>
+
+    </div>
+
+
+    <div class="model-grid">
+
+
+        <div class="model-card">
+
+            <div class="model-number">
+                01
+            </div>
+
+            <h3>
+                CNN
+            </h3>
+
+            <p>
+                Convolutional Neural Network used
+                for image classification.
+            </p>
+
+        </div>
+
+
+        <div class="model-card">
+
+            <div class="model-number">
+                02
+            </div>
+
+            <h3>
+                ResNet50
+            </h3>
+
+            <p>
+                Transfer learning architecture
+                evaluated during model comparison.
+            </p>
+
+        </div>
+
+
+        <div class="model-card">
+
+            <div class="model-number">
+                03
+            </div>
+
+            <h3>
+                ANN
+            </h3>
+
+            <p>
+                Artificial Neural Network evaluated
+                as another classification approach.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+{% endblock %}

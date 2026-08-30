@@ -1,0 +1,309 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+How It Works | PlantCare AI
+{% endblock %}
+
+
+{% block content %}
+
+
+<section class="page-header">
+
+    <span class="small-title">
+        TECHNOLOGY
+    </span>
+
+    <h1>
+        How PlantCare AI Works
+    </h1>
+
+    <p>
+        From image upload to AI prediction,
+        the system follows a series of processing steps.
+    </p>
+
+</section>
+
+<section class="section">
+
+    <div class="process-grid">
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                01
+            </div>
+
+            <div class="feature-icon">
+                📷
+            </div>
+
+            <h3>
+                Upload Image
+            </h3>
+
+            <p>
+                The user uploads an image of
+                a plant leaf through the website.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                02
+            </div>
+
+            <div class="feature-icon">
+                🖼️
+            </div>
+
+            <h3>
+                Image Preprocessing
+            </h3>
+
+            <p>
+                The image is resized to 224 × 224
+                pixels and normalized.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                03
+            </div>
+
+            <div class="feature-icon">
+                🧠
+            </div>
+
+            <h3>
+                CNN Analysis
+            </h3>
+
+            <p>
+                The trained CNN model extracts
+                important visual features.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                04
+            </div>
+
+            <div class="feature-icon">
+                📊
+            </div>
+
+            <h3>
+                Classification
+            </h3>
+
+            <p>
+                The model produces a probability
+                for the two trained classes.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                05
+            </div>
+
+            <div class="feature-icon">
+                ✅
+            </div>
+
+            <h3>
+                Final Result
+            </h3>
+
+            <p>
+                The website displays Healthy or
+                Disease along with confidence.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<section class="architecture-section">
+
+    <div class="section-heading">
+
+        <span class="small-title">
+            CNN ARCHITECTURE
+        </span>
+
+        <h2>
+            Model Processing Pipeline
+        </h2>
+
+    </div>
+
+
+    <div class="architecture-flow">
+
+        <div class="architecture-box">
+            Input Image
+            <small>224 × 224 × 3</small>
+        </div>
+
+        <span>→</span>
+
+        <div class="architecture-box">
+            Conv2D
+            <small>32 Filters</small>
+        </div>
+
+        <span>→</span>
+
+        <div class="architecture-box">
+            MaxPooling
+        </div>
+
+        <span>→</span>
+
+        <div class="architecture-box">
+            Conv2D
+            <small>64 Filters</small>
+        </div>
+
+        <span>→</span>
+
+        <div class="architecture-box">
+            MaxPooling
+        </div>
+
+        <span>→</span>
+
+        <div class="architecture-box">
+            Conv2D
+            <small>128 Filters</small>
+        </div>
+
+        <span>→</span>
+
+        <div class="architecture-box">
+            Dense
+            <small>128 Units</small>
+        </div>
+
+        <span>→</span>
+
+        <div class="architecture-box final-box">
+            Output
+            <small>Healthy / Disease</small>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <span class="small-title">
+            IMAGE PREPROCESSING
+        </span>
+
+        <h2>
+            Preparing the Image for the Model
+        </h2>
+
+    </div>
+
+
+    <div class="preprocessing-box">
+
+        <div class="preprocess-step">
+
+            <strong>
+                Original Image
+            </strong>
+
+            <span>
+                User uploaded image
+            </span>
+
+        </div>
+
+
+        <div class="arrow">
+            ↓
+        </div>
+
+
+        <div class="preprocess-step">
+
+            <strong>
+                Resize
+            </strong>
+
+            <span>
+                224 × 224 pixels
+            </span>
+
+        </div>
+
+
+        <div class="arrow">
+            ↓
+        </div>
+
+
+        <div class="preprocess-step">
+
+            <strong>
+                Normalize
+            </strong>
+
+            <span>
+                Pixel values ÷ 255
+            </span>
+
+        </div>
+
+
+        <div class="arrow">
+            ↓
+        </div>
+
+
+        <div class="preprocess-step">
+
+            <strong>
+                CNN Model
+            </strong>
+
+            <span>
+                Prediction
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{% endblock %}
