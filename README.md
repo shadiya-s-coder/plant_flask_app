@@ -2,6 +2,8 @@
   A deep learning-based **Plant Disease Prediction Web Application** built using **Python, TensorFlow/Keras, and Flask**. The application allows users to upload a plant leaf image and uses a trained Convolutional Neural Network (CNN) model to predict whether the plant is **Healthy** or **Diseased**.
 
 ## TO HAVE A DEMO
+Download all the files locally.
+Type the below comment lines in command prompt.
 Open your browser and visit: http://127.0.0.1:5000/
 
 ## PROJECT OVERVIEW
